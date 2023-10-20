@@ -11,6 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_burger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/burger.js */ "./src/js/components/burger.js");
 /* harmony import */ var _components_burger_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_burger_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
+/* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_modal_js__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),
@@ -160,6 +163,37 @@ burger.addEventListener('click', e => {
   burger.classList.toggle('burger--active');
   menu.classList.toggle('nav--active');
   overlay.classList.toggle('overlay--active');
+});
+
+/***/ }),
+
+/***/ "./src/js/components/modal.js":
+/*!************************************!*\
+  !*** ./src/js/components/modal.js ***!
+  \************************************/
+/***/ (() => {
+
+const btns = document.querySelectorAll('.help-button');
+const modalOverlay = document.querySelector('.modal-help-overlay ');
+const modals = document.querySelectorAll('.modal-help');
+btns.forEach(el => {
+  el.addEventListener('click', e => {
+    let path = e.currentTarget.getAttribute('data-path');
+    modals.forEach(el => {
+      el.classList.remove('modal-help--visible');
+    });
+    document.querySelector(`[data-target="${path}"]`).classList.add('modal-help--visible');
+    modalOverlay.classList.add('modal-help-overlay--visible');
+  });
+});
+modalOverlay.addEventListener('click', e => {
+  if (e.target == modalOverlay) {
+    console.log(modalOverlay);
+    modalOverlay.classList.remove('modal-help-overlay--visible');
+    modals.forEach(el => {
+      el.classList.remove('modal-help--visible');
+    });
+  }
 });
 
 /***/ }),

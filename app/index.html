@@ -19,7 +19,7 @@
   <div class="site-container">
     <header class="header">
   <div class="container-fluid header__container">
-   
+
     <div class="header__btn-wrap">
       <button class="btn-reset burger header__burger" aria-label="Открыть меню">
         <span class="burger__line"></span>
@@ -30,32 +30,60 @@
       <img src="img/logo.svg" alt="logo">
     </div>
     <div class="header__help">
-      <img src="img/ic_help.svg" alt="">
+      <a href="#" class="help-button" data-path="form-popup">
+        <img src="img/ic_help.svg" alt="">
+      </a>
+
+    </div>
+    <div class="modal-container">
+      <div class="modal-help-overlay">
+        <a class="modal-help" data-target="form-popup">
+          <div class="modal-content">
+           <div class="modal-body">
+            <h2 class="kuku">kuku</h2>
+           </div>
+          </div>
+        </a>
+        </div>
     </div>
   </div>
 </header>
 
     <main class="main">
-      <section class="hero">
+      <section class="hero" style="background-image: url(../img/pic_main.png); background-repeat: no-repeat; background-size: cover;">
+  <nav class="nav">
+    <ul class="nav__list list-reset">
+      <li class="nav__title">
+        ЛИЧНЫЙ КАБИНЕТ
+        <ul class="nav__sublist list-reset">
+          <li class="nav__item"><a href="#">Вход в Личный кабинет</a></li>
+        </ul>
+      </li>
+      <li class="nav__title list-reset">КАК ЭТО РАБОТАЕТ
+        <ul class="nav__sublist list-reset">
+          <li class="nav__item"><a href="#">Условия использования сервиса</a> </li>
+          <li class="nav__item"><a href="#">Способы оплаты</a></li>
+          <li class="nav__item"><a href="#">Часто задаваемые вопросы</a></li>
+          <li class="nav__item"><a href="#">Служба поддержки</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
   <div class="container-fluid hero__container">
-    <div class="nav">
-      <ul class="nav__list list-reset">
-        <li class="nav__title">
-          ЛИЧНЫЙ КАБИНЕТ
-          <ul class="nav__sublist list-reset">
-            <li class="nav__item"><a href="#">Вход в Личный кабинет</a></li>
-          </ul>
-        </li>
-        <li class="nav__title list-reset">КАК ЭТО РАБОТАЕТ
-          <ul class="nav__sublist list-reset">
-            <li class="nav__item"><a href="#">Условия использования сервиса</a> </li>
-            <li class="nav__item"><a href="#">Способы оплаты</a></li>
-            <li class="nav__item"><a href="#">Часто задаваемые вопросы</a></li>
-            <li class="nav__item"><a href="#">Служба поддержки</a></li>
-          </ul>
-        </li>
-      </ol>
-    </div>
+
+
+    <div class="hero__block">
+
+
+        <h1 class="hero__title">Поиск начислений</h1>
+        <form action="#" class="hero__form form">
+          <input type="text" class="input-reset form__input" placeholder="Введите данные для поиска">
+          <input type="submit" value="Найти" class="input-reset form__btn btn btn--active">
+        </form>
+        <p class="hero__descr">Чем больше параметров введено, тем полнее результаты поиска</p>
+      </div>
+
+
   </div>
 </section>
 

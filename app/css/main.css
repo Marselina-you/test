@@ -142,6 +142,7 @@ a {
   -moz-appearance: none;
   appearance: none;
   border: none;
+  outline: none;
   border-radius: 0;
   background-color: #fff;
 }
@@ -273,8 +274,37 @@ a {
   max-width: var(--content-width);
 }
 
+.btn {
+  border-style: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.btn--active {
+  height: 60px;
+  padding: 14px 34px;
+  background: var(--unnamed-color-d30531) 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  font-weight: 400;
+  opacity: 1;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffffff);
+  text-align: center;
+  font: normal normal 600 24px/32px Open Sans;
+  letter-spacing: 0px;
+  opacity: 1;
+  font-weight: 400;
+}
+@media (min-width: 800px) {
+  .btn--active:hover {
+    background: #E1133F 0% 0% no-repeat padding-box;
+  }
+}
+
 .header {
-  height: 69px;
+  height: 68px;
   position: relative;
   background-color: inherit;
   z-index: 5000;
@@ -352,5 +382,141 @@ a {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
+}
+
+.hero {
+  height: 360px;
+  background-color: inherit;
+  background-repeat: no-repeat;
+}
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.hero__block {
+  margin-top: 90px;
+}
+.hero__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  text-align: center;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffffff);
+  text-align: left;
+  font: normal normal 600 36px/48px Open Sans;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+.hero__descr {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/21px var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffffff);
+  text-align: left;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+.form__input {
+  width: 800px;
+  height: 60px;
+  padding: 0 22px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  margin-right: 17px;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  border: 2px solid var(--unnamed-color-00468533);
+  border-radius: 8px;
+  opacity: 1;
+}
+.form__input input {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/21px var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: left;
+  letter-spacing: 0px;
+  color: rgba(0, 0, 0, 0.4588235294);
+  opacity: 1;
+}
+.modal-help-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-help {
+  width: 241px;
+  height: 159px;
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: none;
+}
+
+.modal-help-overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-help--visible {
+  display: block;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-body {
+  padding: 30px 50px;
 }
 /*# sourceMappingURL=main.css.map */
