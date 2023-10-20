@@ -19,6 +19,7 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  background-color: var(--unnamed-color-ffffff);
 }
 
 img {
@@ -105,3 +106,14 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+.burger {
+
+  @include burger;
+}
+.container-fluid {
+  width: 100%;
+}
+.container {
+  max-width: var(--content-width);
+}
+

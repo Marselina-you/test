@@ -1,0 +1,56 @@
+.nav {
+  position: absolute;
+  z-index: 4000;
+  top: 70px;
+  //border-top: 1px solid var(--unnamed-color-000000);
+//left: -280px;
+width: 280px;
+height: 733px;
+/* UI Properties */
+background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+//box-shadow: 0px 3px 12px #00000029;
+box-shadow: 0px 11px 12px #00000029;
+opacity: 0.95;
+transform: translateX(-280px);
+transition: transform 0.3s ease-out;
+
+&__list {
+  padding: 21px 16px;
+}
+
+&__title {
+  text-transform: uppercase;
+}
+
+
+&__item {
+  a {
+    text-transform: capitalize;
+    font-weight: 400;
+    color: var(--unnamed-color-004685);
+    text-decoration: var(--unnamed-decoration-underline);
+    transition: color .3s ease-in-out;
+
+    &:focus {
+      color: var(--unnamed-color-569ddc);
+    }
+
+    @include for-desktop {
+
+      &:hover {
+        color: var(--unnamed-color-569ddc);
+      }
+    }
+    &:active {
+      color: var(--unnamed-color-569ddc);
+    }
+  }
+}
+}
+.nav--active {
+  //position: absolute;
+
+  transform: none;
+
+}

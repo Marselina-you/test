@@ -1,0 +1,25 @@
+.header {
+height: 69px;
+position: relative;
+  background-color: inherit;
+  z-index: 5000;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn-wrap {
+    padding-top: 19px;
+    padding-left: 18px
+
+  }
+  &__logo {
+    padding-top: 11px;
+    padding-right: 29px;
+  }
+  &__help {
+    padding-top: 12px;
+    padding-right: 11px;
+  }
+}

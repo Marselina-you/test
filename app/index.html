@@ -18,19 +18,53 @@
 <body class="page__body">
   <div class="site-container">
     <header class="header">
-  <div class="container"></div>
+  <div class="container-fluid header__container">
+   
+    <div class="header__btn-wrap">
+      <button class="btn-reset burger header__burger" aria-label="Открыть меню">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+
+    <div class="header__logo logo">
+      <img src="img/logo.svg" alt="logo">
+    </div>
+    <div class="header__help">
+      <img src="img/ic_help.svg" alt="">
+    </div>
+  </div>
 </header>
 
     <main class="main">
-      <picture>
-        <source srcset="img/cover.avif" type="image/avif">
-        <source srcset="img/cover.webp" type="image/webp">
-        <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">
-      </picture>
+      <section class="hero">
+  <div class="container-fluid hero__container">
+    <div class="nav">
+      <ul class="nav__list list-reset">
+        <li class="nav__title">
+          ЛИЧНЫЙ КАБИНЕТ
+          <ul class="nav__sublist list-reset">
+            <li class="nav__item"><a href="#">Вход в Личный кабинет</a></li>
+          </ul>
+        </li>
+        <li class="nav__title list-reset">КАК ЭТО РАБОТАЕТ
+          <ul class="nav__sublist list-reset">
+            <li class="nav__item"><a href="#">Условия использования сервиса</a> </li>
+            <li class="nav__item"><a href="#">Способы оплаты</a></li>
+            <li class="nav__item"><a href="#">Часто задаваемые вопросы</a></li>
+            <li class="nav__item"><a href="#">Служба поддержки</a></li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
     </main>
 
     <footer class="footer">
-  <div class="container"></div>
+  <div class="container">
+    <div class="overlay"></div>
+  </div>
 </footer>
 
     
