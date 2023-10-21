@@ -1,11 +1,16 @@
 .form-search {
-
+position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 
+  @include small-tablet {
+
+  }
+
   &__input {
+    position: relative;
     width: 800px;
     height: 60px;
     padding: 0 22px;
@@ -13,22 +18,80 @@
     padding-bottom: 20px;
     margin-right: 17px;
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-    border: 2px solid var(--unnamed-color-00468533);
+    //border: 2px solid var(--unnamed-color-00468533);
+
     border-radius: 8px;
     opacity: 1;
+
+
+
+    @include small-tablet {
+      margin: 0;
+      padding: 0 12px;
+      width: 320px;
+      height: 50px;
+
+
+    }
 
     input {
       font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/21px var(--unnamed-font-family-open-sans);
       letter-spacing: var(--unnamed-character-spacing-0);
       text-align: left;
+      border: 2px solid var(--unnamed-color-00468533);
       //font: normal normal normal 16px/21px Open Sans;
       letter-spacing: 0px;
       color: #00000075;
       opacity: 1;
+
+      @include small-tablet {
+        font-size: var(--unnamed-font-size-16);
+        line-height: 24px;
+      }
     }
 
   }
   &__btn {
+@include small-tablet {
+  display: none;
+
+
+}
+
+  }
+
+  @include small-tablet {
+    //margin-left: 20px;
+  }
+}
+.form-search__btn-mb {
+  display: none;
+
+  @include small-tablet {
+    display: block;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    fill: var(--unnamed-color-004685);
+
+    transition: fill 0.3s ease-in-out;
+
+
+
+      &:hover {
+        fill: var(--unnamed-color-569ddc);
+      }
+
+
 
   }
 }

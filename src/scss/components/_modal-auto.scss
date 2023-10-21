@@ -22,13 +22,13 @@
 	width: 400px;
   height: 469px;
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   outline: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
   margin-top: -131px;
+  opacity: 1;
 	display: none;
 
   &__title {

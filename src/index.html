@@ -9,12 +9,42 @@
     <main class="main">
       @include('partials/hero.html')
       @include('partials/info-block.html')
+       <!--
+
       @include('partials/content.html')
-      @include('partials/partner.html')
+      @include('partials/partner.html')-->
     </main>
 
-    @include('partials/footer.html')
-    <!-- @include('html/h1.html') пример include -->
+     <!-- @include('partials/footer.html')
+   @include('html/h1.html') пример include -->
+  </div>
+  <div class="modal-container">
+    <div class="modal-auto-overlay" >
+      <div class="modal-auto" data-target="auto-popup">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="btn-reset modal-auto__close">
+
+               <img src="img/ic_close.svg" alt="close" class="modal-auto__close-img">
+
+            </button>
+<div class="modal-auto__title">Введите логин и пароль<br> для входа в Личный кабинет</div>
+<div class="modal-auto__form">
+<form action="#" class="form-auto">
+  <input type="text" placeholder="Логин" class="form-auto__input">
+  <input type="password" placeholder="Пароль" class="form-auto__input">
+  <input type="submit" value="Войти" class="form-auto__btn btn btn-reset btn--active">
+</form>
+</div>
+<ul class="list-reset">
+<li class="modal-auto__item item"><a href="">Напомнить пароль</a></li>
+<li class="modal-auto__item item"><a href="">Регистрация</a></li>
+</ul>
+          </div>
+
+        </div>
+      </div>
+      </div>
   </div>
 </body>
 

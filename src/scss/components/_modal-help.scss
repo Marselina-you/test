@@ -16,6 +16,7 @@
   //display: block;
 	display: none;
 
+
   &::after {
     content: "";
     position: absolute;
@@ -86,6 +87,7 @@ transition: color .3s ease-in-out;
 .modal-help--visible {
 	//display: block;
   display: flex;
+  cursor: pointer;
 }
 
 

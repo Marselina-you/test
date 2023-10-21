@@ -2,6 +2,7 @@
   height: 360px;
   background-color: inherit;
   background-repeat: no-repeat;
+  margin-top: 68px;
 
 
   &__container {
@@ -12,6 +13,11 @@
 
   &__block {
     margin-top: 90px;
+
+    @include small-tablet {
+      padding: 0 5px;
+    }
+
     //margin-right: 47px;
 
 
@@ -22,16 +28,19 @@
     margin: 0;
     padding: 0;
     margin-bottom: 16px;
-
     text-align: center;
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-open-sans);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-ffffff);
-text-align: left;
-font: normal normal 600 36px/48px Open Sans;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
+    //letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    opacity: 1;
+
+    @include small-tablet {
+      margin-top: 47px;
+      font-size: var(--unnamed-font-size-20);
+      line-height: 27px;
+      text-align: center;
+    }
   }
   &__descr {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/21px var(--unnamed-font-family-open-sans);
@@ -44,5 +53,17 @@ color: #FFFFFF;
 opacity: 1;
 margin-top: 12px;
 //margin-right: 4px;
+
+@include small-tablet {
+  display: block;
+  max-width: 281px;
+  font-size: 12px;
+  line-height: 13px;
+  word-break:break-all;
+}
+  }
+  @include small-tablet {
+    margin-top: -48px;
+    height: 311px;
   }
 }
