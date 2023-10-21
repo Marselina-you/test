@@ -30,22 +30,19 @@
       <img src="img/logo.svg" alt="logo">
     </div>
     <div class="header__help">
-      <a href="#" class="help-button" data-path="form-popup">
-        <img src="img/ic_help.svg" alt="">
-      </a>
+      <button class="help-button btn-reset">
+        <img src="img/ic_help.svg" alt=""></button>
+
 
     </div>
-    <div class="modal-container">
-      <div class="modal-help-overlay">
-        <a class="modal-help" data-target="form-popup">
-          <div class="modal-content">
-           <div class="modal-body">
-            <h2 class="kuku">kuku</h2>
-           </div>
-          </div>
-        </a>
+
+
+        <div class="modal-help">
+          <p class="modal-help__title">Тел. поддержки</p>
+           <span class="modal-help__phone">8 800 123-45-67</span>
+           <a href="#" class="modal-help__href">Написать письмо</a>
         </div>
-    </div>
+
   </div>
 </header>
 
@@ -53,13 +50,13 @@
       <section class="hero" style="background-image: url(../img/pic_main.png); background-repeat: no-repeat; background-size: cover;">
   <nav class="nav">
     <ul class="nav__list list-reset">
-      <li class="nav__title">
-        ЛИЧНЫЙ КАБИНЕТ
+      <li class="nav__title"><span class="nav__title">ЛИЧНЫЙ КАБИНЕТ</span>
+
         <ul class="nav__sublist list-reset">
-          <li class="nav__item"><a href="#">Вход в Личный кабинет</a></li>
+          <li class="nav__item"><a href="#" class="auto-button" data-path="auto-popup">Вход в Личный кабинет</a></li>
         </ul>
       </li>
-      <li class="nav__title list-reset">КАК ЭТО РАБОТАЕТ
+      <li class="nav__title list-reset"><span class="nav__title">КАК ЭТО РАБОТАЕТ</span>
         <ul class="nav__sublist list-reset">
           <li class="nav__item"><a href="#">Условия использования сервиса</a> </li>
           <li class="nav__item"><a href="#">Способы оплаты</a></li>
@@ -68,6 +65,35 @@
         </ul>
       </li>
     </ul>
+
+    <div class="modal-container">
+      <div class="modal-auto-overlay">
+        <div class="modal-auto" data-target="auto-popup">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="btn-reset modal-auto__close">
+
+                 <img src="img/ic_close.svg" alt="close" class="modal-auto__close-img">
+
+              </button>
+<div class="modal-auto__title">Введите логин и пароль<br> для входа в Личный кабинет</div>
+<div class="modal-auto__form">
+  <form action="#" class="form-auto">
+    <input type="text" placeholder="Логин" class="form-auto__input">
+    <input type="password" placeholder="Пароль" class="form-auto__input">
+    <input type="submit" value="Войти" class="form-auto__btn btn btn-reset btn--active">
+  </form>
+</div>
+<ul class="list-reset">
+  <li class="nav__item modal-auto__item"><a href="">Напомнить пароль</a></li>
+  <li class="nav__item modal-auto__item"><a href="">Регистрация</a></li>
+</ul>
+            </div>
+
+          </div>
+        </div>
+        </div>
+    </div>
   </nav>
   <div class="container-fluid hero__container">
 
@@ -76,9 +102,9 @@
 
 
         <h1 class="hero__title">Поиск начислений</h1>
-        <form action="#" class="hero__form form">
-          <input type="text" class="input-reset form__input" placeholder="Введите данные для поиска">
-          <input type="submit" value="Найти" class="input-reset form__btn btn btn--active">
+        <form action="#" class="hero__form form-search">
+          <input type="text" class="input-reset form-search__input" placeholder="Введите данные для поиска">
+          <input type="submit" value="Найти" class="input-reset form-search__btn btn btn--active">
         </form>
         <p class="hero__descr">Чем больше параметров введено, тем полнее результаты поиска</p>
       </div>

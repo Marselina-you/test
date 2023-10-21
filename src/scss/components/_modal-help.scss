@@ -1,52 +1,91 @@
 .modal-help {
-
-
-}
-.modal-help-overlay {
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-
-  display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	width: 100%;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.3s ease-in-out;
-}
-
-.modal-help {
+  position: absolute;
+  top: 52px;
+  right: 11px;
   width: 241px;
-  height: 159px;
-  /* UI Properties */
+  min-height: 149px;
+  padding: 16px 33px;
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 12px #00000033;
-
   outline: 0;
-	display: flex;
+	//display: flex;
+  flex-direction: column;
 	align-items: center;
 	justify-content: center;
+  //display: block;
 	display: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 9px;
+    border-style: solid;
+    border-width: 0 10px 10px 8px;
+    border-color: transparent transparent var(--unnamed-color-ffffff) transparent;
 }
 
-.modal-help-overlay--visible {
-	opacity: 1;
-	visibility: visible;
-	transition: all 0.3s ease-in-out;
-}
+  &__title {
+    margin: 0;
+    padding: 0;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-000000);
+    text-align: center;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    text-transform: capitalize;
+  }
+  &__phone {
+margin-bottom: 8px;
+max-width: 209px;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) 22px/38px var(--unnamed-font-family-open-sans);
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    text-transform: uppercase;
+
+  }
+
+  &__href {
+    text-decoration: var(--unnamed-decoration-underline);
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/22px var(--unnamed-font-family-open-sans);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-004685);
+text-align: center;
+font: normal normal 600 16px/22px Open Sans;
+letter-spacing: 0px;
+text-transform: capitalize;
+color: var(--unnamed-color-004685);
+text-decoration: var(--unnamed-decoration-underline);
+transition: color .3s ease-in-out;
+
+      &:focus {
+        color: var(--unnamed-color-569ddc);
+      }
+
+      @include for-desktop {
+
+        &:hover {
+          color: var(--unnamed-color-569ddc);
+        }
+      }
+      &:active {
+        color: var(--unnamed-color-569ddc);
+      }
+    }
+  }
+
+
 
 .modal-help--visible {
-	display: block;
+	//display: block;
+  display: flex;
 }
-.modal-content {
-  position: relative;
-}
-.modal-body {
-  padding: 30px 50px;
-}
+
 

@@ -1,0 +1,34 @@
+.form-auto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__input {
+    width: 320px;
+height: 60px;
+background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+border: 2px solid var(--unnamed-color-00468533);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #00468533;
+border-radius: 8px;
+opacity: 1;
+
+
+&:not(:last-child) {
+  margin-bottom: 16px;
+}
+&:not(:first-child) {
+  margin-bottom: 23px;
+}
+
+
+  padding-left: 22px;
+
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+}
