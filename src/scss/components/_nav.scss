@@ -91,3 +91,43 @@ opacity: 1;
     margin-bottom: 15px;
   }
 }
+.item {
+
+  a {
+    text-transform: capitalize;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/22px var(--unnamed-font-family-open-sans);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-004685);
+text-align: left;
+text-decoration: underline;
+
+letter-spacing: 0px;
+color: #004685;
+opacity: 1;
+    transition: color .3s ease-in-out;
+
+    &:focus {
+      color: var(--unnamed-color-569ddc);
+    }
+
+    @include for-desktop {
+
+      &:hover {
+        color: var(--unnamed-color-569ddc);
+      }
+    }
+    &:active {
+      color: var(--unnamed-color-569ddc);
+    }
+
+
+  }
+}
+.info-block__item {
+
+  a {
+
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/22px var(--unnamed-font-family-open-sans);
+
+}
+}

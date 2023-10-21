@@ -83,7 +83,19 @@ a {
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
-  max-width: var(--container-width);
+  max-width: var(--content-width);
+}
+.container-content {
+  margin: 0 auto;
+  //padding: 0 var(--container-offset);
+  max-width: 960px;
+}
+.container-fluid {
+  width: 100%;
+}
+
+.container-content {
+  min-width: 960px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -111,12 +123,7 @@ a {
 
   @include burger;
 }
-.container-fluid {
-  width: 100%;
-}
-.container {
-  max-width: var(--content-width);
-}
+
 .btn {
   border-style: none;
   cursor: pointer;

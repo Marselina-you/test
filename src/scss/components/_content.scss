@@ -1,0 +1,15 @@
+.content {
+  background: inherit;
+
+  .content-item {
+    padding-top: 60px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--unnamed-color-00468533);
+      padding-bottom: 60px;
+    }
+
+
+  }
+}
+
