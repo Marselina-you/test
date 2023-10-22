@@ -1,69 +1,63 @@
 .content-item {
 
   &__container {
-
     display: grid;
     grid-template-columns: repeat(24, 1fr);
-    //gap: 10px;
-  }
+   }
   &__title {
     margin: 0;
     padding: 0;
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-25)/var(--unnamed-line-spacing-32) var(--unnamed-font-family-open-sans);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-000000);
-text-align: left;
-
-
-  }
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-000000);
+    text-align: left;
+}
   &__subtitle-style {
     font: var(--unnamed-font-style-normal) normal bold var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
-    //letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-d30531);
     text-align: left;
   }
   &__subtitle {
     margin: 0;
     padding: 0;
-    margin-bottom: -5px;
-
+    margin-top: 30px;
+    margin-bottom: -6px;
   }
 
   &__left {
     grid-column: 15 span;
-
-
-
     p {
       margin: 0;
       padding: 6px 0;
       font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-000000);
-    text-align: left;
-
-
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-000000);
+      text-align: left;
     }
   }
   &__right {
     grid-column: 9 span;
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
       &__right-reverce {
+        grid-column-start: 0;
+        grid-column: 9 span;
+        grid-row-start: 1;
 
-    grid-column-start: 0;
-    grid-column: 9 span;
-    grid-row-start: 1;
-
-
-    }
+        @include small-tablet {
+          display: none;
+          
+        }
+      }
     &__article-2 {
-
       margin-top: 21px;
 
       p {
         line-height: 24px;
-        //padding: 2px 0;
       }
     }
 
@@ -71,14 +65,9 @@ text-align: left;
       margin-top: 0;
       padding-top: 13px;
       margin-bottom: -15px;
-
-
     }
-
-
-      &__left-reverce {
+    &__left-reverce {
         grid-column-start: 10;
-        //grid-row-start: 1;
         grid-column: 15 span;
           }
   &__img {
@@ -96,16 +85,12 @@ text-align: left;
     &:nth-child(3) {
       margin-top: 29px;
 
-
       p {
         &:nth-child(3) {
-
           padding: 53px 0;
         }
       }
     }
-
-
   }
   &__article-2-txt {
     margin-top: -3px;
@@ -114,6 +99,5 @@ text-align: left;
     a {
       text-transform: lowercase;
     }
-
   }
 }
