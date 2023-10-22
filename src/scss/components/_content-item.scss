@@ -3,6 +3,15 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
+
+    @include tablet {
+     padding: 0 16px 0 15px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    @include small-tablet {
+      display: flex;
+    }
    }
   &__title {
     margin: 0;
@@ -11,6 +20,18 @@
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-000000);
     text-align: left;
+
+    @include small-tablet {
+      position: relative;
+      margin-left: 20px;
+      margin-top: 4px;
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
+      color: var(--unnamed-color-004685);
+      text-align: left;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      transition: all .3s ease-in-out;
+    }
 }
   &__subtitle-style {
     font: var(--unnamed-font-style-normal) normal bold var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
@@ -22,6 +43,10 @@
     padding: 0;
     margin-top: 30px;
     margin-bottom: -6px;
+
+    @include small-tablet {
+      margin-top: 16px;
+    }
   }
 
   &__left {
@@ -30,13 +55,19 @@
       margin: 0;
       padding: 6px 0;
       font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
-      letter-spacing: var(--unnamed-character-spacing-0);
       color: var(--unnamed-color-000000);
       text-align: left;
     }
+@include tablet {
+  grid-column: 6 span;
+}
   }
   &__right {
     grid-column: 9 span;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
 
     @include small-tablet {
       display: none;
@@ -48,9 +79,15 @@
         grid-column: 9 span;
         grid-row-start: 1;
 
+        @include tablet {
+
+            grid-column: 6 span;
+
+        }
+
         @include small-tablet {
           display: none;
-          
+
         }
       }
     &__article-2 {
@@ -69,6 +106,12 @@
     &__left-reverce {
         grid-column-start: 10;
         grid-column: 15 span;
+
+        @include tablet {
+          @include tablet {
+            grid-column: 6 span;
+          }
+        }
           }
   &__img {
     display: flex;
@@ -80,7 +123,7 @@
   }
   &__article {
     &:not(:last-child ) {
-      margin-top: 16px;
+      margin-top: 17px;
     }
     &:nth-child(3) {
       margin-top: 29px;
@@ -101,3 +144,35 @@
     }
   }
 }
+.title-icon {
+display: none;
+width: 44px;
+    height: 44px;
+  @include small-tablet {
+
+   display: block;
+   margin-left: -1px;
+    margin-top: 5px;
+
+    svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #004685;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: fill 0.3s ease-in-out;
+  }
+}
+  }
+  .content-item-3 {
+    @include small-tablet {
+      padding-bottom: 30px;
+    }
+  }
+  .content-item__href {
+    a {
+      text-underline-offset: 1px;
+    }
+
+  }

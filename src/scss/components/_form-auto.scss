@@ -6,13 +6,13 @@
 
   &__input {
     width: 320px;
-height: 60px;
-background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-border: 2px solid var(--unnamed-color-00468533);
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 2px solid #00468533;
-border-radius: 8px;
-opacity: 1;
+    height: 60px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 2px solid var(--unnamed-color-00468533);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #00468533;
+    border-radius: 8px;
+    opacity: 1;
 
 
 &:not(:last-child) {
@@ -21,14 +21,15 @@ opacity: 1;
 &:not(:first-child) {
   margin-bottom: 23px;
 }
-
-
-  padding-left: 22px;
-
-  }
+padding-left: 22px;
+}
 
   &__btn {
     width: 100%;
+
+    @include tablet {
+      width: 320px;
+    }
   }
 
 }

@@ -12,6 +12,30 @@
       margin: 0;
       padding: 0;
     }
+    @include small-tablet {
+      flex-direction: column;
+      justify-content: center;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 20px 30px;
+
+      article {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 17px;
+
+
+      }
+      p {
+        margin-right: 2px;
+      }
+    }
+  }
+  &__logo {
+    @include small-tablet {
+      display: flex;
+      justify-content: center;
+    }
   }
 
 }

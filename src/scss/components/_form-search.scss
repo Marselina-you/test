@@ -5,10 +5,6 @@ position: relative;
   align-items: center;
   width: 100%;
 
-  @include small-tablet {
-
-  }
-
   &__input {
     position: relative;
     width: 800px;
@@ -18,20 +14,19 @@ position: relative;
     padding-bottom: 20px;
     margin-right: 17px;
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-    //border: 2px solid var(--unnamed-color-00468533);
-
     border-radius: 8px;
     opacity: 1;
 
-
+    @include tablet {
+      width: 700px;
+      margin-right: 0;
+    }
 
     @include small-tablet {
       margin: 0;
-      padding: 0 12px;
+      padding: 0 10px;
       width: 320px;
       height: 50px;
-
-
     }
 
     input {
@@ -39,7 +34,6 @@ position: relative;
       letter-spacing: var(--unnamed-character-spacing-0);
       text-align: left;
       border: 2px solid var(--unnamed-color-00468533);
-      //font: normal normal normal 16px/21px Open Sans;
       letter-spacing: 0px;
       color: #00000075;
       opacity: 1;
@@ -49,32 +43,32 @@ position: relative;
         line-height: 24px;
       }
     }
-
   }
   &__btn {
-@include small-tablet {
+@include tablet {
   display: none;
-
-
 }
-
-  }
-
-  @include small-tablet {
-    //margin-left: 20px;
-  }
+}
 }
 .form-search__btn-mb {
   display: none;
 
-  @include small-tablet {
+  @include tablet {
     display: block;
-    background-color: transparent;
-    width: 20px;
-    height: 20px;
+    width: 33px;
+    height: 33px;
     position: absolute;
     top: 7px;
     right: 7px;
+  }
+
+  @include small-tablet {
+    background-color: transparent;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 7px;
+    right: 6px;
   }
   svg {
     display: block;
@@ -82,16 +76,10 @@ position: relative;
     height: 100%;
     object-fit: cover;
     fill: var(--unnamed-color-004685);
-
     transition: fill 0.3s ease-in-out;
 
-
-
-      &:hover {
+    &:hover {
         fill: var(--unnamed-color-569ddc);
       }
-
-
-
-  }
+    }
 }

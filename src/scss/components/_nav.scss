@@ -1,19 +1,24 @@
 .nav {
-  position: absolute;
-  z-index: 4000;
+  position: fixed;
+  top: -40px;
+  z-index: 1000;
   top: 70px;
-  //border-top: 1px solid var(--unnamed-color-000000);
-//left: -280px;
-width: 280px;
-height: 733px;
-/* UI Properties */
-background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-//box-shadow: 0px 3px 12px #00000029;
-box-shadow: 0px 11px 12px #00000029;
-opacity: 0.95;
-transform: translateX(-280px);
-transition: transform 0.3s ease-out;
+  width: 280px;
+  height: 733px;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 11px 12px #00000029;
+  opacity: 0.95;
+  transition: transform 0.3s ease-out;
+  transform: translateX(-280px);
+
+@include small-tablet {
+  transform: none;
+  right: -280px;
+  transition: right .3s ease-in-out;
+  top: 49px;
+
+}
 
 &__list {
   padding: 21px 16px;
@@ -22,14 +27,13 @@ transition: transform 0.3s ease-out;
 &__title {
 
   font: var(--unnamed-font-style-normal) normal bold var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-000000);
-text-align: left;
-
-letter-spacing: 0px;
-color: #000000;
-text-transform: uppercase;
-opacity: 1;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
   text-transform: uppercase;
 
   span {
@@ -43,8 +47,6 @@ opacity: 1;
 
 
 }
-
-
 &__item {
   &:not(:last-child) {
     margin-bottom: 22px;
@@ -52,14 +54,13 @@ opacity: 1;
   a {
     text-transform: capitalize;
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/22px var(--unnamed-font-family-open-sans);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-004685);
-text-align: left;
-text-decoration: underline;
-
-letter-spacing: 0px;
-color: #004685;
-opacity: 1;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-004685);
+    text-align: left;
+    text-decoration: underline;
+    letter-spacing: 0px;
+    color: #004685;
+    opacity: 1;
     transition: color .3s ease-in-out;
 
     &:focus {
@@ -75,16 +76,18 @@ opacity: 1;
     &:active {
       color: var(--unnamed-color-569ddc);
     }
-
-
   }
 }
 }
 .nav--active {
-  //position: absolute;
-
+  top: 69px;
   transform: none;
 
+  @include small-tablet {
+    top: 49px;
+    right: 0;
+
+  }
 }
 .modal-auto__item {
   &:not(:last-child) {
@@ -96,13 +99,14 @@ opacity: 1;
   a {
     text-transform: capitalize;
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/22px var(--unnamed-font-family-open-sans);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-004685);
-text-align: left;
-text-decoration: underline;
-letter-spacing: 0px;
-color: #004685;
-opacity: 1;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-004685);
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    letter-spacing: 0px;
+    color: #004685;
+    opacity: 1;
     transition: color .3s ease-in-out;
 
     &:focus {

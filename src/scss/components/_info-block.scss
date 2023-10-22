@@ -2,6 +2,10 @@
   background-color: inherit;
   margin-bottom: 22px;
 
+  @include small-tablet {
+    margin-bottom: 18px;
+  }
+
 
 
   &__title {
@@ -30,9 +34,8 @@
     justify-content: center;
 
     @include small-tablet {
-      flex-direction: column;
-      justify-content: start;
-      margin-top: 33px;
+      display: none;
+
     }
 
 

@@ -15,7 +15,7 @@ html {
 }
 
 .page__body {
-  //overflow-x: hidden;
+  overflow-x: hidden;
   margin: 0;
   min-width: 320px;
   min-height: 100%;
@@ -96,9 +96,7 @@ a {
   width: 100%;
 }
 
-.container-content {
-  min-width: 960px;
-}
+
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;

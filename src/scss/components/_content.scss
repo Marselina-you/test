@@ -4,13 +4,26 @@
 
   .content-item {
     padding-top: 60px;
+    @include small-tablet {
+      padding-top: 0;
+      border-bottom: 1px solid var(--unnamed-color-00468533);
+
+    }
 
     &:not(:last-child) {
       border-bottom: 1px solid var(--unnamed-color-00468533);
       padding-bottom: 60px;
+
+      @include small-tablet {
+        padding-bottom: 0px;
+      }
     }
-
-
+    @include small-tablet {
+      padding-bottom: 0;
+    }
+  }
+  @include small-tablet {
+    margin-bottom: 0;
   }
 }
 

@@ -3,41 +3,39 @@ position: fixed;
 height: 68px;
 width: 100%;;
   background-color: var(--unnamed-color-ffffff);
-  //z-index: 5000;
+  z-index: 1000;
 
   &__container {
     position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 
     @include small-tablet {
       flex-direction: row-reverse;
-    }
+      }
   }
   &__btn-wrap {
     padding-top: 19px;
     padding-left: 18px;
 
     @include small-tablet {
-      padding-top: 10px;
-padding-left: 0;
-padding-right: 17px;
+      display: block;
+      padding-top: 15px;
+      padding-left: 0;
+      padding-right: 21px;
     }
-
-
   }
   &__logo {
     padding-top: 11px;
     padding-right: 29px;
 
     @include small-tablet {
-
       max-width: 239px;
       padding-top: 9px;
       padding-left: 16px;
     }
-
-  }
+}
   &__help {
     padding-top: 12px;
     padding-right: 11px;

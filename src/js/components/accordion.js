@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const accordions = document.querySelectorAll('.accordion');
   const acc = document.querySelectorAll('.accordion-content');
+  const btn = document.querySelectorAll('.accordion-icon');
 
 
     accordions.forEach(el => {
@@ -8,19 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const self = e.currentTarget;
 
         const control = self.querySelector('.accordion-control');
+        const btn = control.querySelector('.accordion-icon');
+        console.log(btn);
         const content = self.querySelector('.accordion-content');
-
-
-
         self.classList.toggle('open');
 
-        // если открыт аккордеон
 
           if (self.classList.contains('open')) {
             control.setAttribute('aria-expanded', true);
             content.setAttribute('aria-hidden', false);
 
-            content.style.maxHeight = content.scrollHeight + 'px';
+
+            content.style.maxHeight = content.scrollHeight + 25 +'px';
           } else {
             control.setAttribute('aria-expanded', false);
 

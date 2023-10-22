@@ -4,7 +4,6 @@
   background-repeat: no-repeat;
   margin-top: 68px;
 
-
   &__container {
     display: flex;
     justify-content: center;
@@ -17,23 +16,20 @@
     @include small-tablet {
       padding: 0 5px;
     }
-
-    //margin-right: 47px;
-
-
   }
-
-
 &__title {
     margin: 0;
     padding: 0;
     margin-bottom: 16px;
     text-align: center;
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-open-sans);
-    //letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-ffffff);
     text-align: left;
     opacity: 1;
+
+    @include tablet {
+      text-align: center;
+    }
 
     @include small-tablet {
       margin-top: 47px;
@@ -44,15 +40,14 @@
   }
   &__descr {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/21px var(--unnamed-font-family-open-sans);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-ffffff);
-text-align: left;
-//font: normal normal normal 16px/21px Open Sans;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-margin-top: 12px;
-//margin-right: 4px;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-top: 12px;
+
 
 @include small-tablet {
   display: block;
